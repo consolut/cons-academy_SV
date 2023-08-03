@@ -1,0 +1,10 @@
+{
+  "shipToParty": "17100006",
+  "salesOrderType": "OR",
+  "salesOrganisation": "1710",
+  "distributionChannel": "10",
+  "shippingCountry": "German",
+  "division": "00",
+  "orderAmount": 200,
+  "material": "ABC"
+}

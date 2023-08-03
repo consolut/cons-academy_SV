@@ -1,0 +1,76 @@
+{
+    "id": "approvalform",
+    "schemaVersion": "1.1.0",
+    "name": "ApprovalForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "requestoverview",
+            "type": "section",
+            "title": "RequestOverview",
+            "content": [
+                {
+                    "id": "shiptoparty",
+                    "type": "string",
+                    "label": "ShipToParty",
+                    "readOnly": true,
+                    "value": "${context.shipToParty}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "salesorganization",
+                    "type": "string",
+                    "label": "SalesOrganization",
+                    "readOnly": true,
+                    "value": "${context.salesOrganisation}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "orderammount",
+                    "type": "integer",
+                    "label": "OrderAmount",
+                    "readOnly": true,
+                    "value": "${context.orderAmount}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "decisioncomment_",
+            "type": "section",
+            "title": "DecisionComment ",
+            "content": [
+                {
+                    "id": "comment",
+                    "type": "string",
+                    "label": "Comment",
+                    "readOnly": false,
+                    "value": "${context.comment}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
