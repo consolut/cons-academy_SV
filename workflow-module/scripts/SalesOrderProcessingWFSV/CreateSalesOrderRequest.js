@@ -7,17 +7,17 @@ $.context.SalesOrderHeader = {
 }
 var body = {
 
-	"SoldToParty": $.context.shipToParty,
+	"SoldToParty": $.context.salesOrderDetails.shipToParty,
 
-	"SalesOrderType": $.context.salesOrderType,
+	"SalesOrderType": $.context.salesOrderDetails.salesOrderType,
 
-	"TotalNetAmount": $.context.orderAmount.toString(),
+	"TotalNetAmount": $.context.salesOrderDetails.orderAmount.toString(),
 
-	"SalesOrganization": $.context.salesOrganisation,
+	"SalesOrganization": $.context.salesOrderDetails.salesOrganisation,
 
-	"DistributionChannel": $.context.distributionChannel,
+	"DistributionChannel": $.context.salesOrderDetails.distributionChannel,
 
-	"OrganizationDivision": $.context.division
+	"OrganizationDivision": $.context.salesOrderDetails.division
 
 }
 $.context.SalesOrderHeader.request = body

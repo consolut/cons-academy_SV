@@ -1,0 +1,59 @@
+{
+    "id": "itemdetailsform",
+    "schemaVersion": "1.1.0",
+    "name": "ItemDetailsForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "item_details",
+            "type": "section",
+            "title": "Item Details",
+            "content": [
+                {
+                    "id": "lime_item",
+                    "type": "string",
+                    "label": "Limeitem",
+                    "readOnly": true,
+                    "value": "${context.salesOrderDetails.item.lineItem}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "material",
+                    "type": "string",
+                    "label": "Material",
+                    "readOnly": true,
+                    "value": "${context.salesOrderDetails.item.material}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "quantity",
+                    "type": "string",
+                    "label": "Quantity",
+                    "readOnly": false,
+                    "value": "${context.salesOrderDetails.item.quantity}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

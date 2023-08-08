@@ -1,10 +1,16 @@
 {
-  "shipToParty": "17100006",
-  "salesOrderType": "OR",
-  "salesOrganisation": "1710",
-  "distributionChannel": "10",
-  "shippingCountry": "German",
-  "division": "00",
-  "orderAmount": 200,
-  "material": "ABC"
+  "salesOrderDetails": {
+    "division": "00",
+    "salesOrderType": "OR",
+    "orderAmount": 200,
+    "shippingCountry": "German",
+    "salesOrganisation": "1710",
+    "distributionChannel": "10",
+    "shipToParty": "17100006",
+    "item": {
+      "lineItem": "10",
+      "material": "TG11",
+      "quantity": "1"
+    }
+  }
 }
