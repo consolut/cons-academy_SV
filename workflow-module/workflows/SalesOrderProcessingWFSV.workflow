@@ -191,7 +191,7 @@
 			"classDefinition": "com.sap.bpm.wfs.ServiceTask",
 			"destination": "JuniorsTrainingHTTP",
 			"destinationSource": "consumer",
-			"path": "/A_SalesOrder('{SalesOrder}')/to_Item",
+			"path": "/Α_SalesOrder('${context.SalesOrderHeader.response.d.SalesOrder}')/to_Item",
 			"httpMethod": "POST",
 			"xsrfPath": "/$metadata?sap-client=100",
 			"requestVariable": "${context.SalesOrderItem.request}",
